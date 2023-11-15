@@ -1,5 +1,6 @@
 package com.latihankedua
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.latihankedua.databinding.ActivityLoginLinearBinding
@@ -15,6 +16,9 @@ class LoginActivity: AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             email = binding.etEmail.text.toString()
             password = binding.etPassword.text.toString()
+            Log.d("PRINT-LOG", email )
+
+
             if (email.isNullOrEmpty() || password.isNullOrEmpty()){
                 Toast.makeText(applicationContext, "Ups ... !! Email atau Password masih kosong", Toast.LENGTH_SHORT).show()
             }else{
